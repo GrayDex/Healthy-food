@@ -1,8 +1,5 @@
 <?php
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die;
-/** @var $APPLICATION */
-
-
 ?>
 <!doctype html>
 <head>
@@ -10,7 +7,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die;
     <meta charset="utf-8">
     <title><?php $APPLICATION->ShowTitle();?></title>
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-    <script defer="defer" src="<?=SITE_TEMPLATE_PATH?>/assets/vendor.js"></script>
+    <script defer="defer" src="<?= SITE_TEMPLATE_PATH?>/assets/vendor.js"></script>
     <script defer="defer" src="<?=SITE_TEMPLATE_PATH?>/assets/app.js"></script>
     <link href="<?=SITE_TEMPLATE_PATH?>/590.css" rel="stylesheet">
     <link href="<?=SITE_TEMPLATE_PATH?>/app.css" rel="stylesheet">

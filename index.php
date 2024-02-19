@@ -1,8 +1,8 @@
 <?php
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
+/** @var $APPLICATION */
 $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 ?>
-
     <div class="banner"></div>
     <div class="header-main" data-header-menu data-overlay-on data-header-component="menu">
         <div class="header-main__wrapper desktop">
@@ -569,14 +569,14 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="swiper-slide main-slider__slide">
                             <div class="main-slider__slide-bg desktop" data-swiper-parallax="1440" data-bg-parallax>
                                 <picture class="picture">
-                                    <source type="image/webp" srcset="assets/images/main-slider-bg1.webp">
-                                    <img class="picture__img" src="assets/images/main-slider-bg1.png">
+                                    <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg1.webp">
+                                    <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg1.png">
                                 </picture>
                             </div>
                             <div class="main-slider__slide-bg devices">
                                 <picture class="picture">
-                                    <source type="image/webp" srcset="assets/images/main-slider-bg1.webp">
-                                    <img class="picture__img" src="assets/images/main-slider-bg1.png">
+                                    <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg1.webp">
+                                    <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg1.png">
                                 </picture>
                             </div>
                             <div class="main-slider__content">
@@ -608,14 +608,14 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="swiper-slide main-slider__slide">
                             <div class="main-slider__slide-bg desktop" data-swiper-parallax="1440" data-bg-parallax>
                                 <picture class="picture">
-                                    <source type="image/webp" srcset="assets/images/main-slider-bg2.webp">
-                                    <img class="picture__img" src="assets/images/main-slider-bg2.png">
+                                    <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg2.webp">
+                                    <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg2.png">
                                 </picture>
                             </div>
                             <div class="main-slider__slide-bg devices">
                                 <picture class="picture">
-                                    <source type="image/webp" srcset="assets/images/main-slider-bg2.webp">
-                                    <img class="picture__img" src="assets/images/main-slider-bg2.png">
+                                    <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg2.webp">
+                                    <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg2.png">
                                 </picture>
                             </div>
                             <div class="main-slider__content">
@@ -647,14 +647,14 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="swiper-slide main-slider__slide">
                             <div class="main-slider__slide-bg desktop" data-swiper-parallax="1440" data-bg-parallax>
                                 <picture class="picture">
-                                    <source type="image/webp" srcset="assets/images/main-slider-bg3.webp">
-                                    <img class="picture__img" src="assets/images/main-slider-bg3.png">
+                                    <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg3.webp">
+                                    <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg3.png">
                                 </picture>
                             </div>
                             <div class="main-slider__slide-bg devices">
                                 <picture class="picture">
-                                    <source type="image/webp" srcset="assets/images/main-slider-bg3.webp">
-                                    <img class="picture__img" src="assets/images/main-slider-bg3.png">
+                                    <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg3.webp">
+                                    <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg3.png">
                                 </picture>
                             </div>
                             <div class="main-slider__content">
@@ -686,14 +686,14 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="swiper-slide main-slider__slide">
                             <div class="main-slider__slide-bg desktop" data-swiper-parallax="1440" data-bg-parallax>
                                 <picture class="picture">
-                                    <source type="image/webp" srcset="assets/images/main-slider-bg4.webp">
-                                    <img class="picture__img" src="assets/images/main-slider-bg4.png">
+                                    <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg4.webp">
+                                    <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg4.png">
                                 </picture>
                             </div>
                             <div class="main-slider__slide-bg devices">
                                 <picture class="picture">
-                                    <source type="image/webp" srcset="assets/images/main-slider-bg4.webp">
-                                    <img class="picture__img" src="assets/images/main-slider-bg4.png">
+                                    <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg4.webp">
+                                    <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg4.png">
                                 </picture>
                             </div>
                             <div class="main-slider__content">
@@ -735,14 +735,14 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="swiper-slide main-slider__slide">
                             <div class="main-slider__slide-bg desktop" data-swiper-parallax="1440" data-bg-parallax>
                                 <picture class="picture">
-                                    <source type="image/webp" srcset="assets/images/main-slider-bg5.webp">
-                                    <img class="picture__img" src="assets/images/main-slider-bg5.png">
+                                    <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg5.webp">
+                                    <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg5.png">
                                 </picture>
                             </div>
                             <div class="main-slider__slide-bg devices">
                                 <picture class="picture">
-                                    <source type="image/webp" srcset="assets/images/main-slider-bg5.webp">
-                                    <img class="picture__img" src="assets/images/main-slider-bg5.png">
+                                    <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg5.webp">
+                                    <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg5.png">
                                 </picture>
                             </div>
                             <div class="main-slider__content">
@@ -815,8 +815,8 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="swiper-slide main-slider__slide">
                             <div class="main-slider__slide-bg mobile bg-bg-bg">
                                 <picture class="picture">
-                                    <source type="image/webp" srcset="assets/images/main-slider-bg1-mobile.webp">
-                                    <img class="picture__img" src="assets/images/main-slider-bg1-mobile.png">
+                                    <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg1-mobile.webp">
+                                    <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg1-mobile.png">
                                 </picture>
                             </div>
                             <div class="main-slider__content">
@@ -846,8 +846,8 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="swiper-slide main-slider__slide">
                             <div class="main-slider__slide-bg mobile bg-bg-bg">
                                 <picture class="picture">
-                                    <source type="image/webp" srcset="assets/images/main-slider-bg2-mobile.webp">
-                                    <img class="picture__img" src="assets/images/main-slider-bg2-mobile.png">
+                                    <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg2-mobile.webp">
+                                    <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg2-mobile.png">
                                 </picture>
                             </div>
                             <div class="main-slider__content">
@@ -878,8 +878,8 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="swiper-slide main-slider__slide">
                             <div class="main-slider__slide-bg mobile bg-bg-bg">
                                 <picture class="picture">
-                                    <source type="image/webp" srcset="assets/images/main-slider-bg3-mobile.webp">
-                                    <img class="picture__img" src="assets/images/main-slider-bg3-mobile.png">
+                                    <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg3-mobile.webp">
+                                    <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg3-mobile.png">
                                 </picture>
                             </div>
                             <div class="main-slider__content">
@@ -911,8 +911,8 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="swiper-slide main-slider__slide">
                             <div class="main-slider__slide-bg mobile bg-bg-bg">
                                 <picture class="picture">
-                                    <source type="image/webp" srcset="assets/images/main-slider-bg4-mobile.webp">
-                                    <img class="picture__img" src="assets/images/main-slider-bg4-mobile.png">
+                                    <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg4-mobile.webp">
+                                    <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg4-mobile.png">
                                 </picture>
                             </div>
                             <div class="main-slider__content">
@@ -954,8 +954,8 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="swiper-slide main-slider__slide">
                             <div class="main-slider__slide-bg mobile bg-bg-bg">
                                 <picture class="picture">
-                                    <source type="image/webp" srcset="assets/images/main-slider-bg5-mobile.webp">
-                                    <img class="picture__img" src="assets/images/main-slider-bg5-mobile.png">
+                                    <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg5-mobile.webp">
+                                    <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-slider-bg5-mobile.png">
                                 </picture>
                             </div>
                             <div class="main-slider__content">
@@ -1033,14 +1033,14 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                     class="main-catalog__item btn-hover_parent" href="#">
                 <div class="main-catalog__item-bg desktop">
                     <picture class="picture">
-                        <source type="image/webp" srcset="assets/images/main-catalog-item-bg1.webp">
-                        <img class="picture__img" src="assets/images/main-catalog-item-bg1.png">
+                        <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-catalog-item-bg1.webp">
+                        <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-catalog-item-bg1.png">
                     </picture>
                 </div>
                 <div class="main-catalog__item-bg mobile">
                     <picture class="picture">
-                        <source type="image/webp" srcset="assets/images/main-catalog-item-bg1-mobile.webp">
-                        <img class="picture__img" src="assets/images/main-catalog-item-bg1-mobile.png">
+                        <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-catalog-item-bg1-mobile.webp">
+                        <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-catalog-item-bg1-mobile.png">
                     </picture>
                 </div>
                 <div class="main-catalog__item-row">
@@ -1058,14 +1058,14 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
             </a><a class="main-catalog__item btn-hover_parent" href="#">
                 <div class="main-catalog__item-bg desktop">
                     <picture class="picture">
-                        <source type="image/webp" srcset="assets/images/main-catalog-item-bg2.webp">
-                        <img class="picture__img" src="assets/images/main-catalog-item-bg2.png">
+                        <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-catalog-item-bg2.webp">
+                        <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-catalog-item-bg2.png">
                     </picture>
                 </div>
                 <div class="main-catalog__item-bg mobile">
                     <picture class="picture">
-                        <source type="image/webp" srcset="assets/images/main-catalog-item-bg2-mobile.webp">
-                        <img class="picture__img" src="assets/images/main-catalog-item-bg2-mobile.png">
+                        <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-catalog-item-bg2-mobile.webp">
+                        <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-catalog-item-bg2-mobile.png">
                     </picture>
                 </div>
                 <div class="main-catalog__item-row">
@@ -1083,14 +1083,14 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
             </a><a class="main-catalog__item btn-hover_parent" href="#">
                 <div class="main-catalog__item-bg desktop">
                     <picture class="picture">
-                        <source type="image/webp" srcset="assets/images/main-catalog-item-bg3.webp">
-                        <img class="picture__img" src="assets/images/main-catalog-item-bg3.png">
+                        <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-catalog-item-bg3.webp">
+                        <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-catalog-item-bg3.png">
                     </picture>
                 </div>
                 <div class="main-catalog__item-bg mobile">
                     <picture class="picture">
-                        <source type="image/webp" srcset="assets/images/main-catalog-item-bg3-mobile.webp">
-                        <img class="picture__img" src="assets/images/main-catalog-item-bg3-mobile.png">
+                        <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-catalog-item-bg3-mobile.webp">
+                        <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-catalog-item-bg3-mobile.png">
                     </picture>
                 </div>
                 <div class="main-catalog__item-row">
@@ -1225,7 +1225,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                     </svg>
                 </div>
                 <div class="main-traditions__video-video">
-                    <video src="assets/videos/zp_preview.mp4" loop muted playsinline autoplay preload="none"></video>
+                    <video src="<?=SITE_TEMPLATE_PATH?>/assets/videos/zp_preview.mp4" loop muted playsinline autoplay preload="none"></video>
                 </div>
                 <div class="main-traditions__video-button">
                     <svg width="576" height="202" viewbox="0 0 576 202" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1266,20 +1266,20 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
         <div class="main-filials__landscape" data-aos="fade-up" data-aos-duration="1500">
             <div class="main-filials__landscape-bg desktop">
                 <picture class="picture">
-                    <source type="image/webp" srcset="assets/images/main-filials-bg.webp">
-                    <img class="picture__img" src="assets/images/main-filials-bg.png">
+                    <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-filials-bg.webp">
+                    <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-filials-bg.png">
                 </picture>
             </div>
             <div class="main-filials__landscape-bg devices">
                 <picture class="picture">
-                    <source type="image/webp" srcset="assets/images/main-filials-bg-device.webp">
-                    <img class="picture__img" src="assets/images/main-filials-bg-device.png">
+                    <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-filials-bg-device.webp">
+                    <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-filials-bg-device.png">
                 </picture>
             </div>
             <div class="main-filials__landscape-bg mobile-mob">
                 <picture class="picture">
-                    <source type="image/webp" srcset="assets/images/main-filials-bg-mobile.webp">
-                    <img class="picture__img" src="assets/images/main-filials-bg-mobile.png">
+                    <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-filials-bg-mobile.webp">
+                    <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-filials-bg-mobile.png">
                 </picture>
             </div>
             <div class="main-filials__landscape-top">
@@ -1333,8 +1333,8 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                     <div class="main-filials__card-row">
                         <div class="main-filials__card-icons">
                             <picture class="picture">
-                                <source type="image/webp" srcset="assets/images/main-filials-card-icons1.webp">
-                                <img class="picture__img" src="assets/images/main-filials-card-icons1.png">
+                                <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-filials-card-icons1.webp">
+                                <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-filials-card-icons1.png">
                             </picture>
                         </div>
                         <div class="button button-arrow_right btn-hover_parent">
@@ -1350,8 +1350,8 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
             </a><a class="main-filials__card game btn-hover_parent" href="#" target="blank">
                 <div class="main-filials__card-bg">
                     <picture class="picture">
-                        <source type="image/webp" srcset="assets/images/main-filials-game.webp">
-                        <img class="picture__img" src="assets/images/main-filials-game.png">
+                        <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-filials-game.webp">
+                        <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-filials-game.png">
                     </picture>
                 </div>
                 <div class="main-filials__card-top">
@@ -1362,8 +1362,8 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                     <div class="main-filials__card-row">
                         <div class="main-filials__card-icons short">
                             <picture class="picture">
-                                <source type="image/webp" srcset="assets/images/main-filials-card-icons2.webp">
-                                <img class="picture__img" src="assets/images/main-filials-card-icons2.png">
+                                <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-filials-card-icons2.webp">
+                                <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-filials-card-icons2.png">
                             </picture>
                         </div>
                         <div class="button button-arrow_right btn-hover_parent">
@@ -1416,8 +1416,8 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="swiper-wrapper"><a class="swiper-slide main-news__card" href="#">
                                 <div class="main-news__card-img">
                                     <picture class="picture">
-                                        <source type="image/webp" srcset="assets/images/main-news-card1.webp">
-                                        <img class="picture__img" src="assets/images/main-news-card1.png">
+                                        <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-news-card1.webp">
+                                        <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-news-card1.png">
                                     </picture>
                                     <span class="main-news__card-plug">выставки и конференции</span>
                                 </div>
@@ -1427,8 +1427,8 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                             </a><a class="swiper-slide main-news__card" href="#">
                                 <div class="main-news__card-img">
                                     <picture class="picture">
-                                        <source type="image/webp" srcset="assets/images/main-news-card1.webp">
-                                        <img class="picture__img" src="assets/images/main-news-card1.png">
+                                        <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-news-card1.webp">
+                                        <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-news-card1.png">
                                     </picture>
                                     <span class="main-news__card-plug">выставки и конференции</span>
                                 </div>
@@ -1438,8 +1438,8 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                             </a><a class="swiper-slide main-news__card" href="#">
                                 <div class="main-news__card-img">
                                     <picture class="picture">
-                                        <source type="image/webp" srcset="assets/images/main-news-card1.webp">
-                                        <img class="picture__img" src="assets/images/main-news-card1.png">
+                                        <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-news-card1.webp">
+                                        <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-news-card1.png">
                                     </picture>
                                     <span class="main-news__card-plug">выставки и конференции</span>
                                 </div>
@@ -1449,8 +1449,8 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                             </a><a class="swiper-slide main-news__card" href="#">
                                 <div class="main-news__card-img">
                                     <picture class="picture">
-                                        <source type="image/webp" srcset="assets/images/main-news-card1.webp">
-                                        <img class="picture__img" src="assets/images/main-news-card1.png">
+                                        <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-news-card1.webp">
+                                        <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-news-card1.png">
                                     </picture>
                                     <span class="main-news__card-plug">выставки и конференции</span>
                                 </div>
@@ -1460,8 +1460,8 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                             </a><a class="swiper-slide main-news__card" href="#">
                                 <div class="main-news__card-img">
                                     <picture class="picture">
-                                        <source type="image/webp" srcset="assets/images/main-news-card1.webp">
-                                        <img class="picture__img" src="assets/images/main-news-card1.png">
+                                        <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-news-card1.webp">
+                                        <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-news-card1.png">
                                     </picture>
                                     <span class="main-news__card-plug">выставки и конференции</span>
                                 </div>
@@ -1512,7 +1512,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
             <div class="popup-video__video">
                 <video class="zp-video" controls="controls" width="100%" height="100%"
                        poster="./assets/images/about-production-popup-icecream.png" preload="none">
-                    <source src="./assets/videos/video-zdor-product.mp4">
+                    <source src="<?=SITE_TEMPLATE_PATH?>/./assets/videos/video-zdor-product.mp4">
                 </video>
             </div>
         </div>

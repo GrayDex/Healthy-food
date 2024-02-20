@@ -1,3 +1,5 @@
+<?php if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die; ?>
+
 <header class="header" id="header">
     <div class="header-wrapper">
         <div class="header-row">

@@ -1,6 +1,6 @@
-bitrix
-upload
-images
-.idea
+bitrix/
+upload/
+images/
+.idea/
 .gitignore
 main.html

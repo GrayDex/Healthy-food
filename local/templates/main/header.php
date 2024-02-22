@@ -1,6 +1,4 @@
-<?php
-if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die;
-?>
+<?php if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die; ?>
 
 <!doctype html>
 <html lang=<?=LANGUAGE_ID?>>
@@ -15,4 +13,4 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die;
     <div><?php $APPLICATION->ShowPanel() ?></div>
         <div class="wrapper">
             <?php require_once($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH."/include/templ/header.php"); ?>
-                <main class="main">
+                <?php require_once($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH."/include/templ/main_tag.php"); ?>

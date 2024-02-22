@@ -175,7 +175,6 @@
             </div>
         </div>
     </div>
-
     <div class="header-production" data-overlay-on data-header-component="production">
         <div class="header-production__inner">
             <div class="header-production__inner-top mobile">

@@ -176,6 +176,7 @@
         </div>
     </div>
     <div class="header-production" data-overlay-on data-header-component="production">
+
         <div class="header-production__inner">
             <div class="header-production__inner-top mobile">
                 <div class="header-production__inner-back" data-production-close><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -184,20 +185,30 @@
                     </svg></div>
                 <div class="header-production__inner-title">Продукция</div>
             </div>
+
             <div class="header-production__items">
-                <div class="main-catalog__list header-prod"><a class="main-catalog__item btn-hover_parent" href="#">
+                <div class="main-catalog__list header-prod">
+
+
+                    <a class="main-catalog__item btn-hover_parent" href="#">
+
                         <div class="main-catalog__item-bg desktop-only">
                             <picture class="picture">
-                                <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-catalog-item-bg1-header.webp"><img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-catalog-item-bg1-header.png">
+                                <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-catalog-item-bg1-header.webp">
+                                <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-catalog-item-bg1-header.png">
                             </picture>
                         </div>
+
                         <div class="main-catalog__item-bg mobile-only">
                             <picture class="picture">
-                                <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/header-production-mobile1.webp"><img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/header-production-mobile1.png">
+                                <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/header-production-mobile1.webp">
+                                <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/header-production-mobile1.png">
                             </picture>
                         </div>
+
                         <div class="main-catalog__item-row">
-                            <div class="header-production__sub-logo mobile"><svg width="87" height="20" viewbox="0 0 87 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <div class="header-production__sub-logo mobile">
+                                <svg width="87" height="20" viewbox="0 0 87 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_707_4235)">
                                         <path d="M19.5645 9.42745C18.9758 9.54338 18.4276 9.45089 17.9199 9.14999C17.4121 8.84908 17.092 8.36177 16.9593 7.68804C16.833 7.04702 16.9406 6.48905 17.2819 6.01415C17.6285 5.53142 18.1158 5.22823 18.7437 5.10457C19.3782 4.97962 19.9408 5.05907 20.4316 5.34293L20.0189 6.30073C19.7369 6.14561 19.4357 6.09962 19.1152 6.16273C18.8208 6.2207 18.5949 6.36712 18.4373 6.60199C18.2784 6.83033 18.2312 7.10802 18.2956 7.43507C18.36 7.76213 18.5057 8.00182 18.7328 8.15415C18.9651 8.29866 19.2218 8.34322 19.5031 8.28783C19.8498 8.21956 20.1334 8.03801 20.3539 7.74318L21.1599 8.4202C20.9459 8.71374 20.7184 8.9386 20.4774 9.09479C20.2416 9.24314 19.9373 9.35403 19.5645 9.42745Z" fill="white"></path>
                                         <path d="M24.1437 8.62346C23.472 8.72902 22.8905 8.61456 22.3993 8.28009C21.9136 7.938 21.6206 7.44754 21.5202 6.80871C21.4198 6.16988 21.5488 5.61648 21.9072 5.14851C22.2711 4.67292 22.789 4.38235 23.4607 4.2768C24.1259 4.17227 24.7046 4.29054 25.1968 4.6316C25.688 4.96607 25.9838 5.45272 26.0842 6.09155C26.1846 6.73038 26.0528 7.28758 25.6889 7.76317C25.324 8.23218 24.8089 8.51894 24.1437 8.62346ZM23.2417 7.32778C23.4429 7.49186 23.6851 7.55166 23.9683 7.50716C24.2515 7.46266 24.4637 7.33146 24.6049 7.11356C24.7451 6.88908 24.7904 6.61878 24.7407 6.30266C24.691 5.98654 24.5656 5.74644 24.3643 5.58235C24.162 5.41168 23.9193 5.3486 23.6361 5.3931C23.3529 5.4376 23.1412 5.57209 23.0011 5.79657C22.8598 6.01447 22.8141 6.28148 22.8637 6.5976C22.9134 6.91372 23.0394 7.15711 23.2417 7.32778Z" fill="white"></path>
@@ -234,9 +245,12 @@
                                             <rect width="86" height="20" fill="white" transform="translate(0.5)"></rect>
                                         </clippath>
                                     </defs>
-                                </svg></div>
+                                </svg>
+                            </div>
+
                             <div class="main-catalog__item-title white">мороженое</div>
                         </div>
+
                         <div class="main-catalog__item-svg">
                             <div class="button button-arrow_right btn-hover_parent">
                                 <div class="btn-hover_circle total-white"></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
@@ -244,7 +258,11 @@
                                 </svg>
                             </div>
                         </div>
-                    </a><a class="main-catalog__item btn-hover_parent" href="#">
+                    </a>
+
+
+
+                    <a class="main-catalog__item btn-hover_parent" href="#">
                         <div class="main-catalog__item-bg desktop-only">
                             <picture class="picture">
                                 <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-catalog-item-bg2-header.webp"><img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-catalog-item-bg2-header.png">
@@ -303,15 +321,18 @@
                                 </svg>
                             </div>
                         </div>
-                    </a><a class="main-catalog__item btn-hover_parent" href="#">
+                    </a>
+                    <a class="main-catalog__item btn-hover_parent" href="#">
                         <div class="main-catalog__item-bg desktop-only">
                             <picture class="picture">
-                                <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-catalog-item-bg3-header.webp"><img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-catalog-item-bg3-header.png">
+                                <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/main-catalog-item-bg3-header.webp">
+                                <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/main-catalog-item-bg3-header.png">
                             </picture>
                         </div>
                         <div class="main-catalog__item-bg mobile-only">
                             <picture class="picture">
-                                <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/header-production-mobile3.webp"><img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/header-production-mobile3.png">
+                                <source type="image/webp" srcset="<?=SITE_TEMPLATE_PATH?>/assets/images/header-production-mobile3.webp">
+                                <img class="picture__img" src="<?=SITE_TEMPLATE_PATH?>/assets/images/header-production-mobile3.png">
                             </picture>
                         </div>
                         <div class="main-catalog__item-row">
@@ -319,13 +340,19 @@
                         </div>
                         <div class="main-catalog__item-svg">
                             <div class="button button-arrow_right btn-hover_parent">
-                                <div class="btn-hover_circle total-white"></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                                <div class="btn-hover_circle total-white"></div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
                                     <path d="M1.77881 11.6197C1.77881 11.2055 2.1146 10.8697 2.52881 10.8697L12.7788 10.8697L12.7788 8.75503C12.7788 6.47297 15.398 5.18387 17.2063 6.57591L20.9276 9.44056C22.3576 10.5414 22.3576 12.698 20.9276 13.7988L17.2063 16.6634C15.398 18.0555 12.7788 16.7664 12.7788 14.4843L12.7788 12.3697L2.52881 12.3697C2.1146 12.3697 1.77881 12.0339 1.77881 11.6197Z" fill="#0068FF"></path>
                                 </svg>
                             </div>
                         </div>
-                    </a></div>
+                    </a>
+
+
+
+                </div>
             </div>
+
         </div>
     </div>
 

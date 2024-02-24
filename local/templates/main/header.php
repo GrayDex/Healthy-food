@@ -13,4 +13,4 @@
     <div><?php $APPLICATION->ShowPanel() ?></div>
         <div class="wrapper">
             <?php require_once($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH."/include/templ/header.php"); ?>
-                <?php require_once($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH."/include/templ/main_tag.php"); ?>
+                <?php require_once($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH."/include/templ/main.php"); ?>

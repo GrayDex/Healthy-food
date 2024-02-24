@@ -1,8 +1,6 @@
-<?php
-if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die;
+<?php if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die;
 
-use Bitrix\Main\Page\Asset;
-$asset = Asset::getInstance();
+$asset = Bitrix\Main\Page\Asset::getInstance();
 $asset->addCss(SITE_TEMPLATE_PATH."/590.css");
 $asset->addCss(SITE_TEMPLATE_PATH."/app.css");
 $asset->addJs(SITE_TEMPLATE_PATH."/assets/vendor.js");

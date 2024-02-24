@@ -630,6 +630,3 @@
 			</button>
 		</form>
 	</div>
-
-	<div class="overlay"></div>
-</main>

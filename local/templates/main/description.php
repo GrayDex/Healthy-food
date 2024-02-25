@@ -1,8 +1,6 @@
 <?php
-$arTemplate = array (
+$arTemplate = [
   'NAME' => 'Main',
   'DESCRIPTION' => 'Main template',
-  'SORT' => '',
-  'TYPE' => '',
-);
+];
 ?>

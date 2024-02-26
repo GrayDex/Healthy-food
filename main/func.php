@@ -1,6 +1,3 @@
-<?php require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-$APPLICATION->SetTitle("Main site");
-?>
 <?$APPLICATION->IncludeComponent(
     "bitrix:news.list",
     "slider",
@@ -72,6 +69,3 @@ $APPLICATION->SetTitle("Main site");
     ),
     false
 );?>
-
-<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php");
-?>

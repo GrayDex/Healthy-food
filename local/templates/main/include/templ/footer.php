@@ -1,6 +1,6 @@
 <?php if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die; ?>
 
-		<div class="overlay"></div>
+
 	</main>
 <footer class="footer">
 	<div class="footer-wrapper desktop" data-aos="fade-up" data-aos-duration="1500">

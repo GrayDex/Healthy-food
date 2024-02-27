@@ -40,7 +40,7 @@ $this->setFrameMode(true);
                             </svg>
                         </div>
 
-                    <? elseif ($arItem['PROPERTIES']['LOGO']['VALUE'] == "new"): ?>
+                    <?php elseif ($arItem['PROPERTIES']['LOGO']['VALUE'] == "new"): ?>
                         <div class="main-slider__content-icon" data-swiper-parallax="-500">
                             <svg xmlns="http://www.w3.org/2000/svg" width="100" height="70" viewbox="0 0 100 70"
                                  fill="none">

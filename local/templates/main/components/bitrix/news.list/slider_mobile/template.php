@@ -1,29 +1,24 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
 $this->setFrameMode(true);
-
-//echo $src = CFile::GetByID($arResult['ITEMS']['PROPERTIES']['IMG_MOBILE']['VALUE'])->arResult[0]['SRC']
+// CFile::GetByID($arResult['ITEMS']['PROPERTIES']['IMG_MOBILE']['VALUE'])->arResult[0]['SRC']
 ?>
 
 <?php if ($arResult['ITEMS']): ?>
 	<div class="swiper-wrapper">
-		<?php
-		foreach ($arResult['ITEMS'] as $arItem): ?>
 
+		<?php foreach ($arResult['ITEMS'] as $arItem): ?>
 
 			<div class="swiper-slide main-slider__slide">
 				<div class="main-slider__slide-bg mobile bg-bg-bg">
 					<picture class="picture">
-
-						<?php $file = CFile::GetByID($arItem['PROPERTIES']['IMG_MOBILE']['VALUE']); ?>
-						<source type="image/webp" srcset="<?= $file->arResult[0]['SRC'] ?>">
-						<img class="picture__img" src="<?= $file->arResult[0]['SRC'] ?>">
+						<source type="image/webp" srcset="<?=$arItem['SRC_IMG']?>">
+						<img class="picture__img" src="<?=$arItem['SRC_IMG']?>">
 					</picture>
 				</div>
 				<div class="main-slider__content">
 
 					<?php if ($arItem['PROPERTIES']['LOGO']['VALUE'] == "top"): ?>
-
 						<div class="main-slider__content-icon">
 							<svg xmlns="http://www.w3.org/2000/svg" width="100" height="70" viewbox="0 0 100 70"
 							     fill="none">
@@ -38,9 +33,9 @@ $this->setFrameMode(true);
 								      fill="#FFE979"></path>
 							</svg>
 						</div>
+					<?php endif; ?>
 
-					<?php elseif ($arItem['PROPERTIES']['LOGO']['VALUE'] == "new"): ?>
-
+					<?php if ($arItem['PROPERTIES']['LOGO']['VALUE'] == "new"): ?>
 						<div class="main-slider__content-icon">
 							<svg xmlns="http://www.w3.org/2000/svg" width="100" height="70" viewbox="0 0 100 70"
 							     fill="none">
@@ -70,13 +65,18 @@ $this->setFrameMode(true);
 
 					<div class="main-slider__content-title"><?= $arItem['NAME'] ?></div>
 					<div class="main-slider__content-desk"><?= $arItem['PREVIEW_TEXT'] ?></div>
+
+					<?php if($arItem['PROPERTIES']['LINK']['VALUE'] != ''): ?>
 					<div class="main-slider__content-bot">
-						<a class="main-slider__content-button" href="<?= $arItem['LINK'] ?>">
+						<a class="main-slider__content-button" href="<?= $arItem['PROPERTIES']['LINK']['VALUE'] ?>">
 							<p>Подробнее</p>
 						</a>
 					</div>
+					<?php endif ?>
+
 				</div>
 			</div>
 		<?php endforeach; ?>
+
 	</div>
 <?php endif; ?>

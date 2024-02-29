@@ -35,7 +35,7 @@
                         ),
                         "FILTER_NAME" => "",
                         "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-                        "IBLOCK_ID" => "3",
+                        "IBLOCK_ID" => "8",
                         "IBLOCK_TYPE" => "sliders",
                         "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
                         "INCLUDE_SUBSECTIONS" => "Y",
@@ -132,7 +132,7 @@
                         "FIELD_CODE" => array("NAME", "PREVIEW_TEXT", ""),
                         "FILTER_NAME" => "",
                         "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-                        "IBLOCK_ID" => "3",
+                        "IBLOCK_ID" => "8",
                         "IBLOCK_TYPE" => "slider",
                         "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
                         "INCLUDE_SUBSECTIONS" => "Y",
@@ -199,6 +199,7 @@
             </div>
         </div>
     </div>
+
     <?$APPLICATION->IncludeComponent(
         "bitrix:catalog.section.list",
         "catalog",
@@ -226,6 +227,7 @@
             "VIEW_MODE" => "LINE"
         )
     );?>
+
 </section>
 <section class="main-traditions container-fluid" data-aos="fade-up" data-aos-duration="1500">
     <div class="main-traditions__bg">

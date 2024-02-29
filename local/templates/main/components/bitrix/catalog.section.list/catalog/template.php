@@ -1,5 +1,6 @@
 <? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
+
 <?php if ($arResult['SECTIONS']): ?>
     <div class="main-catalog__list" data-aos="fade-up" data-aos-duration="1500">
 
@@ -9,29 +10,27 @@
                 <div class="main-catalog__item-bg desktop">
                     <picture class="picture">
                         <source type="image/webp"
-                                srcset="<?= $arSection["PICTURE"]["SRC"] ?>">
+                                srcset="<?= $arSection["SRC_IMG"] ?>">
                         <img class="picture__img"
-                             src="<?= $arSection["PICTURE"]["SRC"] ?>">
+                             src="<?= $arSection["SRC_IMG"] ?>">
                     </picture>
                 </div>
                 <div class="main-catalog__item-bg mobile">
                     <picture class="picture">
                         <source type="image/webp"
-                                srcset="<?= $arSection['SRC_IMG']?>">
+                                srcset="<?= $arSection['SRC_IMG_MOBILE'] ?>">
                         <img class="picture__img"
-                             src="<?= $arSection['SRC_IMG']?>">
+                             src="<?= $arSection['SRC_IMG_MOBILE'] ?>">
                     </picture>
                 </div>
                 <div class="main-catalog__item-row">
                     <div
-                        <? if ($arSection["UF_COLOR"] == '2'): ?>
+                        <? if ($arSection["UF_COLOR"] === 'белый'): ?>
                             class="main-catalog__item-title white"
                         <? else: ?>
                             class="main-catalog__item-title blue"
                         <? endif; ?>
-                    >
-
-                        <?= $arSection['NAME'] ?>
+                    ><?= $arSection['NAME'] ?>
                     </div>
                 </div>
                 <div class="main-catalog__item-svg">

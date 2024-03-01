@@ -1,5 +1,5 @@
 <?php require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-$APPLICATION->SetTitle("Main site");
+$APPLICATION->SetTitle("Cloudmill");
 
 require ($_SERVER['DOCUMENT_ROOT']. SITE_TEMPLATE_PATH. "/pages/main.php");
 

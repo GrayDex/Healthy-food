@@ -1,5 +1,6 @@
 <?php if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die; ?>
 
+
 <section class="top-section top-section_main">
     <div class="main-slider container desktop-t">
         <div class="main-slider__wrapper">

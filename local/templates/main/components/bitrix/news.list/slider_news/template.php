@@ -48,7 +48,7 @@ $this->setFrameMode(true);
         </div>
     </div>
     <div class="main-news__bot">
-        <a class="main-news__bot-button btn-hover_parent" href="<?= $arResult['SECTION_PAGE_URL']?>">
+        <a class="main-news__bot-button btn-hover_parent" href="/news/">
             <div class="btn-hover_circle"></div>
             <span>Все новости и акции</span>
         </a>

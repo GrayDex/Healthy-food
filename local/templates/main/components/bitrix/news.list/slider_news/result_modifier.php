@@ -1,5 +1,6 @@
 <?php if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die;
 
+
 if (CModule::IncludeModule('iblock')) {
     $sectIdList = [];
 
@@ -15,10 +16,11 @@ if (CModule::IncludeModule('iblock')) {
     while ($arSection = $rsSections->GetNext()) {
         $sectNameById[$arSection['ID']] = $arSection['NAME'];
     }
+
+	foreach ($arResult['ITEMS'] as $key => $arItem) {
+		$arResult['ITEMS'][$key]['SECT_NAME'] = $sectNameById[$arItem['IBLOCK_SECTION_ID']];
+	}
 }
 
-foreach ($arResult['ITEMS'] as $key => $arItem) {
-    $arResult['ITEMS'][$key]['DATE_ACTIVE'] = FormatDate('d F Y', MakeTimeStamp($arItem['DATE_ACTIVE_FROM']));
-    $arResult['ITEMS'][$key]['SECT_NAME'] = $sectNameById[$arItem['IBLOCK_SECTION_ID']];
-}
+
 

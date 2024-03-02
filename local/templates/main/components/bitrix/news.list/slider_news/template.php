@@ -1,6 +1,4 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
-
-$this->setFrameMode(true);
 ?>
 
 <?php if ($arResult['ITEMS']): ?>
@@ -9,9 +7,19 @@ $this->setFrameMode(true);
             <div class="swiper main-news__swiper">
                 <div class="swiper-wrapper">
 
+	                <?php if ($arParams["DISPLAY_TOP_PAGER"]): ?>
+		                <?= $arResult["NAV_STRING"] ?><br />
+	                <?php endif; ?>
+
                     <?php foreach ($arResult["ITEMS"] as $arItem): ?>
 
-                        <a class="swiper-slide main-news__card" href='<?=$arItem['DETAIL_PAGE_URL']?>'>
+	                    <?php
+	                    $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
+	                    $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+	                    ?>
+
+	                    <div id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
+                        <a class="swiper-slide main-news__card" href='<?=$arResult['DETAIL_PAGE_URL']?>'>
                             <div class="main-news__card-img">
                                 <picture class="picture">
                                     <source type="image/webp"
@@ -21,10 +29,16 @@ $this->setFrameMode(true);
                                 </picture>
                                 <span class="main-news__card-plug"> <?= $arItem['SECT_NAME']; ?> </span>
                             </div>
-                            <p class="main-news__card-date"><?= $arItem['DATE_ACTIVE'] ?></p>
+                            <p class="main-news__card-date"><?= $arItem['DISPLAY_ACTIVE_FROM'] ?></p>
                             <p class="main-news__card-title"><?= $arItem["NAME"] ?></p>
                         </a>
+	                    </div>
                     <?php endforeach; ?>
+
+	                <?php if ($arParams["DISPLAY_BOTTOM_PAGER"]): ?>
+		                <br /><?= $arResult["NAV_STRING"] ?>
+	                <?php endif; ?>
+
                 </div>
             </div>
         </div>
@@ -48,7 +62,7 @@ $this->setFrameMode(true);
         </div>
     </div>
     <div class="main-news__bot">
-        <a class="main-news__bot-button btn-hover_parent" href="/news/">
+        <a class="main-news__bot-button btn-hover_parent" href="<?= $arResult['LIST_PAGE_URL']?>">
             <div class="btn-hover_circle"></div>
             <span>Все новости и акции</span>
         </a>

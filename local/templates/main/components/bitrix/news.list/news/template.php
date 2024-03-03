@@ -1,9 +1,8 @@
-<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
+<?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+?>
 
-
-<!-- menu -->
 <div class="news-content__top">
-	<h1 class="news-content__title">новости и акции</h1>
+	<h1 class="news-content__title"><?= $arResult['NAME'] ?></h1>
 	<div class="title-rombs">
 		<div class="title-rombs__item">
 			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none">
@@ -33,217 +32,63 @@
 </div>
 <div class="news-content__categories" data-aos="fade-up">
 	<div class="news-content__categories-wrapper">
-
-		<a class="news-content__categories-item active btn-hover_parent no-scale" href="#">
+		<a class="news-content__categories-item <?php if (!$arResult['ACTIVE_SECTION_ID']): ?> active <?php endif; ?> btn-hover_parent no-scale"
+		   href="/news/index.php">
 			<div class="btn-hover_circle white"></div>
 			<span>Все</span>
 		</a>
-		<a class="news-content__categories-item btn-hover_parent no-scale" href="#">
-			<div class="btn-hover_circle white"></div>
-			<span>Новости компании</span>
-		</a>
-		<a class="news-content__categories-item btn-hover_parent no-scale" href="#">
-			<div class="btn-hover_circle white"></div>
-			<span>Акции</span>
-		</a>
-		<a class="news-content__categories-item btn-hover_parent no-scale" href="#">
-			<div class="btn-hover_circle white"></div>
-			<span>Выставки и конференции</span>
-		</a>
-
+		<?php foreach ($arResult['SECT_BY_ID'] as $arSection): ?>
+			<a class="news-content__categories-item <?php if ($arResult['ACTIVE_SECTION_ID'] == $arSection['ID']): ?> active <?php endif; ?> btn-hover_parent no-scale"
+			   href="<?= $arSection['SECTION_PAGE_URL'] ?>">
+				<div class="btn-hover_circle white"></div>
+				<span><?= $arSection['NAME'] ?></span>
+			</a>
+		<?php endforeach; ?>
 	</div>
 </div>
-<!-- end of menu -->
 
-<!-- news list -->
 <div class="news-content__listing" data-aos="fade-up">
 
-	<a class="news-card" href="#">
-		<div class="news-card__top">
-			<div class="news-card__plug">выставки и конференции</div>
-			<div class="news-card__bg">
-				<picture class="picture">
-					<source type="image/webp" srcset="assets/images/main-news-card1.webp">
-					<img class="picture__img" src="assets/images/main-news-card1.png">
-				</picture>
-			</div>
-		</div>
-		<div class="news-card__bot">
-			<div class="news-card__date">6 марта 2023</div>
-			<div class="news-card__title">Диетолог Снегирева рассказала, как выбрать правильное мороженое</div>
-		</div>
-	</a>
-	<a class="news-card" href="#">
-		<div class="news-card__top">
-			<div class="news-card__plug">акции</div>
-			<div class="news-card__bg">
-				<picture class="picture">
-					<source type="image/webp" srcset="assets/images/main-news-card1.webp">
-					<img class="picture__img" src="assets/images/main-news-card1.png">
-				</picture>
-			</div>
-		</div>
-		<div class="news-card__bot">
-			<div class="news-card__date">6 марта 2023</div>
-			<div class="news-card__title">Диетолог Снегирева рассказала, как выбрать правильное мороженое</div>
-		</div>
-	</a>
-	<a class="news-card" href="#">
-		<div class="news-card__top">
-			<div class="news-card__plug">новости компании</div>
-			<div class="news-card__bg">
-				<picture class="picture">
-					<source type="image/webp" srcset="assets/images/main-news-card1.webp">
-					<img class="picture__img" src="assets/images/main-news-card1.png">
-				</picture>
-			</div>
-		</div>
-		<div class="news-card__bot">
-			<div class="news-card__date">6 марта 2023</div>
-			<div class="news-card__title">Диетолог Снегирева рассказала, как выбрать правильное мороженое</div>
-		</div>
-	</a>
-	<a class="news-card" href="#">
-		<div class="news-card__top">
-			<div class="news-card__plug">выставки и конференции</div>
-			<div class="news-card__bg">
-				<picture class="picture">
-					<source type="image/webp" srcset="assets/images/main-news-card1.webp">
-					<img class="picture__img" src="assets/images/main-news-card1.png">
-				</picture>
-			</div>
-		</div>
-		<div class="news-card__bot">
-			<div class="news-card__date">6 марта 2023</div>
-			<div class="news-card__title">Диетолог Снегирева рассказала, как выбрать правильное мороженое</div>
-		</div>
-	</a>
-	<a class="news-card" href="#">
-		<div class="news-card__top">
-			<div class="news-card__plug">акции</div>
-			<div class="news-card__bg">
-				<picture class="picture">
-					<source type="image/webp" srcset="assets/images/main-news-card1.webp">
-					<img class="picture__img" src="assets/images/main-news-card1.png">
-				</picture>
-			</div>
-		</div>
-		<div class="news-card__bot">
-			<div class="news-card__date">6 марта 2023</div>
-			<div class="news-card__title">Диетолог Снегирева рассказала, как выбрать правильное мороженое</div>
-		</div>
-	</a>
-	<a class="news-card" href="#">
-		<div class="news-card__top">
-			<div class="news-card__plug">новости компании</div>
-			<div class="news-card__bg">
-				<picture class="picture">
-					<source type="image/webp" srcset="assets/images/main-news-card1.webp">
-					<img class="picture__img" src="assets/images/main-news-card1.png">
-				</picture>
-			</div>
-		</div>
-		<div class="news-card__bot">
-			<div class="news-card__date">6 марта 2023</div>
-			<div class="news-card__title">Диетолог Снегирева рассказала, как выбрать правильное мороженое</div>
-		</div>
-	</a>
-	<a class="news-card" href="#">
-		<div class="news-card__top">
-			<div class="news-card__plug">выставки и конференции</div>
-			<div class="news-card__bg">
-				<picture class="picture">
-					<source type="image/webp" srcset="assets/images/main-news-card1.webp">
-					<img class="picture__img" src="assets/images/main-news-card1.png">
-				</picture>
-			</div>
-		</div>
-		<div class="news-card__bot">
-			<div class="news-card__date">6 марта 2023</div>
-			<div class="news-card__title">Диетолог Снегирева рассказала, как выбрать правильное мороженое</div>
-		</div>
-	</a>
-	<a class="news-card" href="#">
-		<div class="news-card__top">
-			<div class="news-card__plug">акции</div>
-			<div class="news-card__bg">
-				<picture class="picture">
-					<source type="image/webp" srcset="assets/images/main-news-card1.webp">
-					<img class="picture__img" src="assets/images/main-news-card1.png">
-				</picture>
-			</div>
-		</div>
-		<div class="news-card__bot">
-			<div class="news-card__date">6 марта 2023</div>
-			<div class="news-card__title">Диетолог Снегирева рассказала, как выбрать правильное мороженое</div>
-		</div>
-	</a>
-	<a class="news-card" href="#">
-		<div class="news-card__top">
-			<div class="news-card__plug">новости компании</div>
-			<div class="news-card__bg">
-				<picture class="picture">
-					<source type="image/webp" srcset="assets/images/main-news-card1.webp">
-					<img class="picture__img" src="assets/images/main-news-card1.png">
-				</picture>
-			</div>
-		</div>
-		<div class="news-card__bot">
-			<div class="news-card__date">6 марта 2023</div>
-			<div class="news-card__title">Диетолог Снегирева рассказала, как выбрать правильное мороженое</div>
-		</div>
-	</a>
-	<a class="news-card" href="#">
-		<div class="news-card__top">
-			<div class="news-card__plug">выставки и конференции</div>
-			<div class="news-card__bg">
-				<picture class="picture">
-					<source type="image/webp" srcset="assets/images/main-news-card1.webp">
-					<img class="picture__img" src="assets/images/main-news-card1.png">
-				</picture>
-			</div>
-		</div>
-		<div class="news-card__bot">
-			<div class="news-card__date">6 марта 2023</div>
-			<div class="news-card__title">Диетолог Снегирева рассказала, как выбрать правильное мороженое</div>
-		</div>
-	</a>
-	<a class="news-card" href="#">
-		<div class="news-card__top">
-			<div class="news-card__plug">акции</div>
-			<div class="news-card__bg">
-				<picture class="picture">
-					<source type="image/webp" srcset="assets/images/main-news-card1.webp">
-					<img class="picture__img" src="assets/images/main-news-card1.png">
-				</picture>
-			</div>
-		</div>
-		<div class="news-card__bot">
-			<div class="news-card__date">6 марта 2023</div>
-			<div class="news-card__title">Диетолог Снегирева рассказала, как выбрать правильное мороженое</div>
-		</div>
-	</a>
-	<a class="news-card" href="#">
-		<div class="news-card__top">
-			<div class="news-card__plug">новости компании</div>
-			<div class="news-card__bg">
-				<picture class="picture">
-					<source type="image/webp" srcset="assets/images/main-news-card1.webp">
-					<img class="picture__img" src="assets/images/main-news-card1.png">
-				</picture>
-			</div>
-		</div>
-		<div class="news-card__bot">
-			<div class="news-card__date">6 марта 2023</div>
-			<div class="news-card__title">Диетолог Снегирева рассказала, как выбрать правильное мороженое</div>
-		</div>
-	</a>
+	<?php if ($arParams["DISPLAY_TOP_PAGER"]): ?>
+		<?= $arResult["NAV_STRING"] ?><br/>
+	<?php endif; ?>
 
+	<?php foreach ($arResult['ITEMS'] as $arItem): ?>
+
+		<?php
+		$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
+		$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+		?>
+		<div id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
+			<a class="news-card" href="<?= $arItem['~DETAIL_PAGE_URL'] ?>">
+				<div class="news-card__top">
+					<div class="news-card__plug"><?= $arResult['SECT_BY_ID'][$arItem['IBLOCK_SECTION_ID']]['NAME'] ?></div>
+					<div class="news-card__bg">
+						<picture class="picture">
+							<source type="image/webp" srcset="<?= $arItem['PREVIEW_PICTURE']['SAFE_SRC'] ?>">
+							<img class="picture__img" src="<?= $arItem['PREVIEW_PICTURE']['SAFE_SRC'] ?>">
+						</picture>
+					</div>
+				</div>
+				<div class="news-card__bot">
+					<div class="news-card__date"><?= $arItem['DISPLAY_ACTIVE_FROM'] ?></div>
+					<div class="news-card__title"><?= $arItem['~NAME'] ?></div>
+				</div>
+			</a>
+		</div>
+
+
+	<?php endforeach; ?>
+
+	<?php if ($arParams["DISPLAY_BOTTOM_PAGER"]): ?>
+		<br/><?= $arResult["NAV_STRING"] ?>
+	<?php endif; ?>
 </div>
+
 <div class="news-content__more btn-hover_parent">
 	<div class="btn-hover_circle"></div>
 	<span>Показать еще</span>
 </div>
-<!-- end of news list -->
+
 
 

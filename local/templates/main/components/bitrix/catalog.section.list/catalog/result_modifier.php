@@ -1,7 +1,6 @@
 <?php if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die;
 
 foreach ($arResult['SECTIONS'] as $key => $arSection) {
-
     if (!empty($arSection["PICTURE"])) {
         $size = ['width' => 1200, 'height' => 1200];
         $resized_image = CFile::ResizeImageGet($arSection["PICTURE"], $size, BX_RESIZE_IMAGE_EXACT);

@@ -1,96 +1,188 @@
-<?php if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die; ?>
+<?php if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die;
+?>
 
-<section class="top-section">
-	<section class="news-content container">
+<?php if (empty($_GET['ELEMENT_CODE'])): ?>
+	<section class="top-section">
+		<section class="news-content container">
 
-		<!-- nav panel-->
-		<div class="breadcrumbs">
-			<div class="breadcrumbs-wrapper">
+			<!-- nav panel-->
+			<div class="breadcrumbs">
+				<div class="breadcrumbs-wrapper">
 
-				<div class="breadcrumbs-wrapper__row">
-					<a class="breadcrumbs__item" href="/index.php">главная</a>
-					<div class="breadcrumbs__arrow">
-						<svg width="9" height="14" viewbox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M0.501732 0.71693C0.688798 2.76241 1.82258 7.06302 8.00226 7.42407C8.43495 7.44882 8.66756 6.9815 8.3585 6.70488L1.3053 0.390819C0.992979 0.109838 0.465946 0.325304 0.501732 0.71693Z"
-							      fill="#F64653"></path>
-							<path d="M0.501732 13.2839C0.688798 11.2384 1.82258 6.9378 8.00226 6.57675C8.43495 6.552 8.66756 7.01934 8.3585 7.29595L1.3053 13.61C0.992979 13.8895 0.465946 13.6755 0.501732 13.2839Z"
-							      fill="#F64653"></path>
-						</svg>
+					<div class="breadcrumbs-wrapper__row">
+						<a class="breadcrumbs__item" href="/index.php">главная</a>
+						<div class="breadcrumbs__arrow">
+							<svg width="9" height="14" viewbox="0 0 9 14" fill="none"
+							     xmlns="http://www.w3.org/2000/svg">
+								<path d="M0.501732 0.71693C0.688798 2.76241 1.82258 7.06302 8.00226 7.42407C8.43495 7.44882 8.66756 6.9815 8.3585 6.70488L1.3053 0.390819C0.992979 0.109838 0.465946 0.325304 0.501732 0.71693Z"
+								      fill="#F64653"></path>
+								<path d="M0.501732 13.2839C0.688798 11.2384 1.82258 6.9378 8.00226 6.57675C8.43495 6.552 8.66756 7.01934 8.3585 7.29595L1.3053 13.61C0.992979 13.8895 0.465946 13.6755 0.501732 13.2839Z"
+								      fill="#F64653"></path>
+							</svg>
+						</div>
+						<div class="breadcrumbs__current active">новости и акции</div>
 					</div>
-					<div class="breadcrumbs__current active">новости и акции</div>
+
 				</div>
-
 			</div>
-		</div>
-		<!-- end of nav panel-->
-		<? $APPLICATION->IncludeComponent(
-			"bitrix:news.list",
-			"news",
-			array(
-				"ACTIVE_DATE_FORMAT" => "d.m.Y",
-				"ADD_SECTIONS_CHAIN" => "Y",
-				"AJAX_MODE" => "N",
-				"AJAX_OPTION_ADDITIONAL" => "",
-				"AJAX_OPTION_HISTORY" => "N",
-				"AJAX_OPTION_JUMP" => "N",
-				"AJAX_OPTION_STYLE" => "Y",
-				"CACHE_FILTER" => "N",
-				"CACHE_GROUPS" => "Y",
-				"CACHE_TIME" => "36000000",
-				"CACHE_TYPE" => "A",
-				"CHECK_DATES" => "Y",
-				"DETAIL_URL" => "",
-				"DISPLAY_BOTTOM_PAGER" => "Y",
-				"DISPLAY_DATE" => "Y",
-				"DISPLAY_NAME" => "Y",
-				"DISPLAY_PICTURE" => "Y",
-				"DISPLAY_PREVIEW_TEXT" => "Y",
-				"DISPLAY_TOP_PAGER" => "N",
-				"FIELD_CODE" => array(
-					0 => "",
-					1 => "",
-				),
-				"FILTER_NAME" => "",
-				"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-				"IBLOCK_ID" => "2",
-				"IBLOCK_TYPE" => "content",
-				"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
-				"INCLUDE_SUBSECTIONS" => "Y",
-				"MESSAGE_404" => "",
-				"NEWS_COUNT" => "20",
-				"PAGER_BASE_LINK_ENABLE" => "N",
-				"PAGER_DESC_NUMBERING" => "N",
-				"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-				"PAGER_SHOW_ALL" => "N",
-				"PAGER_SHOW_ALWAYS" => "N",
-				"PAGER_TEMPLATE" => ".default",
-				"PAGER_TITLE" => "Новости",
-				"PARENT_SECTION" => "",
-				"PARENT_SECTION_CODE" => "",
-				"PREVIEW_TRUNCATE_LEN" => "",
-				"PROPERTY_CODE" => array(
-					0 => "",
-					1 => "",
-				),
-				"SET_BROWSER_TITLE" => "Y",
-				"SET_LAST_MODIFIED" => "N",
-				"SET_META_DESCRIPTION" => "Y",
-				"SET_META_KEYWORDS" => "Y",
-				"SET_STATUS_404" => "N",
-				"SET_TITLE" => "Y",
-				"SHOW_404" => "N",
-				"SORT_BY1" => "ACTIVE_FROM",
-				"SORT_BY2" => "SORT",
-				"SORT_ORDER1" => "DESC",
-				"SORT_ORDER2" => "ASC",
-				"STRICT_SECTION_CHECK" => "N",
-				"COMPONENT_TEMPLATE" => "news"
-			),
-			false
-		); ?>
+			<!-- end of nav panel-->
+			<?php $APPLICATION->IncludeComponent(
+	"bitrix:news.list", 
+	"news",
+	array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"ADD_SECTIONS_CHAIN" => "Y",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"CHECK_DATES" => "Y",
+		"DETAIL_URL" => "",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"FILTER_NAME" => "",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"IBLOCK_ID" => "2",
+		"IBLOCK_TYPE" => "content",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_SUBSECTIONS" => "Y",
+		"MESSAGE_404" => "",
+		"NEWS_COUNT" => "20",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TITLE" => "Новости",
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"SET_BROWSER_TITLE" => "Y",
+		"SET_LAST_MODIFIED" => "N",
+		"SET_META_DESCRIPTION" => "Y",
+		"SET_META_KEYWORDS" => "Y",
+		"SET_STATUS_404" => "Y",
+		"SET_TITLE" => "Y",
+		"SHOW_404" => "N",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC",
+		"STRICT_SECTION_CHECK" => "N",
+		"COMPONENT_TEMPLATE" => "news"
+	),
+	false
+); ?>
 
+		</section>
 	</section>
-</section>
+<?php else: ?>
+
+	<?$APPLICATION->IncludeComponent(
+	"bitrix:news.detail", 
+	"detail_new", 
+	array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"ADD_ELEMENT_CHAIN" => "N",
+		"ADD_SECTIONS_CHAIN" => "Y",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"BROWSER_TITLE" => "-",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"CHECK_DATES" => "Y",
+		"COMPONENT_TEMPLATE" => "detail_new",
+		"DETAIL_URL" => "",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"ELEMENT_CODE" => "",
+		"ELEMENT_ID" => "14",
+		"FIELD_CODE" => array(
+			0 => "ID",
+			1 => "CODE",
+			2 => "XML_ID",
+			3 => "NAME",
+			4 => "TAGS",
+			5 => "SORT",
+			6 => "PREVIEW_TEXT",
+			7 => "PREVIEW_PICTURE",
+			8 => "DETAIL_TEXT",
+			9 => "DETAIL_PICTURE",
+			10 => "DATE_ACTIVE_FROM",
+			11 => "ACTIVE_FROM",
+			12 => "DATE_ACTIVE_TO",
+			13 => "ACTIVE_TO",
+			14 => "SHOW_COUNTER",
+			15 => "SHOW_COUNTER_START",
+			16 => "IBLOCK_TYPE_ID",
+			17 => "IBLOCK_ID",
+			18 => "IBLOCK_CODE",
+			19 => "IBLOCK_NAME",
+			20 => "IBLOCK_EXTERNAL_ID",
+			21 => "DATE_CREATE",
+			22 => "CREATED_BY",
+			23 => "CREATED_USER_NAME",
+			24 => "TIMESTAMP_X",
+			25 => "MODIFIED_BY",
+			26 => "USER_NAME",
+			27 => "",
+		),
+		"IBLOCK_ID" => "2",
+		"IBLOCK_TYPE" => "content",
+		"IBLOCK_URL" => "",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"MESSAGE_404" => "",
+		"META_DESCRIPTION" => "-",
+		"META_KEYWORDS" => "-",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TITLE" => "Страница",
+		"PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"SET_BROWSER_TITLE" => "Y",
+		"SET_CANONICAL_URL" => "N",
+		"SET_LAST_MODIFIED" => "N",
+		"SET_META_DESCRIPTION" => "Y",
+		"SET_META_KEYWORDS" => "Y",
+		"SET_STATUS_404" => "N",
+		"SET_TITLE" => "Y",
+		"SHOW_404" => "N",
+		"STRICT_SECTION_CHECK" => "N",
+		"USE_PERMISSIONS" => "N",
+		"USE_SHARE" => "N"
+	),
+	false
+);?>
+<?php endif; ?>
 
 <div class="container">
 	<section class="section-mailing news-content__mailing" data-aos="fade-up">

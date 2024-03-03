@@ -1,30 +1,27 @@
 <?php if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die;
 
-echo print_r($_GET, 1);
-
 if (CModule::IncludeModule('iblock')) {
 
-	$rsSections = CIBlockSection::GetList(array(), array('IBLOCK_ID' => $arResult['ITEMS'][0]['IBLOCK_ID']));
+	$rsSections = CIBlockSection::GetList(array(), array('IBLOCK_CODE' => $arResult['CODE']));
 
+	$arResult['SECTION_BY_ID'][] = [
+		'ID' => 0,
+		'NAME' => 'Все',
+		'SECTION_PAGE_URL' => '/news/',
+		'IS_ACTIVE' => !$_GET['SECTION_CODE'],
+	];
 	while ($arSection = $rsSections->GetNext()) {
-
-		if ($arSection['CODE'] == $_GET['SECTION_CODE']) {
-			$arResult['ACTIVE_SECTION_ID'] = $arSection['ID'];
-		}
-
-		$arResult['SECT_BY_ID'][$arSection['ID']] = [
+		$arResult['SECTION_BY_ID'][$arSection['ID']] = [
 			'ID' => $arSection['ID'],
 			'NAME' => $arSection['NAME'],
 			'SECTION_PAGE_URL' => $arSection['SECTION_PAGE_URL'],
+			'IS_ACTIVE' => $arSection['CODE'] == $_GET['SECTION_CODE'],
 		];
 	}
-}
 
+	foreach ($arResult['ITEMS'] as $key => $arItem) {
+		$itemSectionId = $arItem['IBLOCK_SECTION_ID'];
 
-if ($arResult['ACTIVE_SECTION_ID']) {
-	$active_id = $arResult['ACTIVE_SECTION_ID'];
-
-	$arResult['ITEMS'] = array_filter($arResult['ITEMS'], function ($var) use ($active_id) {
-		return $var['IBLOCK_SECTION_ID'] == $active_id;
-	});
+		$arResult['ITEMS'][$key]['SECTION_NAME'] = $arResult['SECTION_BY_ID'][$itemSectionId]['NAME'];
+	}
 }

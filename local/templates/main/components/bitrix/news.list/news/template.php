@@ -32,18 +32,15 @@
 </div>
 <div class="news-content__categories" data-aos="fade-up">
 	<div class="news-content__categories-wrapper">
-		<a class="news-content__categories-item <?php if (!$arResult['ACTIVE_SECTION_ID']): ?> active <?php endif; ?> btn-hover_parent no-scale"
-		   href="/news/index.php">
-			<div class="btn-hover_circle white"></div>
-			<span>Все</span>
-		</a>
-		<?php foreach ($arResult['SECT_BY_ID'] as $arSection): ?>
-			<a class="news-content__categories-item <?php if ($arResult['ACTIVE_SECTION_ID'] == $arSection['ID']): ?> active <?php endif; ?> btn-hover_parent no-scale"
+
+		<?php foreach ($arResult['SECTION_BY_ID'] as $arSection): ?>
+			<a class="news-content__categories-item <?= $arSection['IS_ACTIVE'] ? 'active' : ''?> btn-hover_parent no-scale"
 			   href="<?= $arSection['SECTION_PAGE_URL'] ?>">
 				<div class="btn-hover_circle white"></div>
 				<span><?= $arSection['NAME'] ?></span>
 			</a>
 		<?php endforeach; ?>
+
 	</div>
 </div>
 
@@ -62,7 +59,7 @@
 		<div id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
 			<a class="news-card" href="<?= $arItem['~DETAIL_PAGE_URL'] ?>">
 				<div class="news-card__top">
-					<div class="news-card__plug"><?= $arResult['SECT_BY_ID'][$arItem['IBLOCK_SECTION_ID']]['NAME'] ?></div>
+					<div class="news-card__plug"><?= $arItem['SECTION_NAME'] ?></div>
 					<div class="news-card__bg">
 						<picture class="picture">
 							<source type="image/webp" srcset="<?= $arItem['PREVIEW_PICTURE']['SAFE_SRC'] ?>">

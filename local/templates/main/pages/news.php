@@ -1,112 +1,117 @@
-<?php if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die;
-?>
+<?php if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die; ?>
 
 <?php if (empty($_GET['ELEMENT_CODE'])): ?>
 	<section class="top-section">
 		<section class="news-content container">
 
-			<?$APPLICATION->IncludeComponent(
-	"bitrix:breadcrumb", 
-	"news_bcrumbs", 
-	array(
-		"PATH" => "/",
-		"SITE_ID" => "s1",
-		"START_FROM" => "0",
-		"COMPONENT_TEMPLATE" => "news_bcrumbs"
-	),
-	false
-);?>
-
-			<!-- end of nav panel-->
+			<!-- breadcrumbs -->
 			<?php $APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"news",
-	array(
-		"ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"ADD_SECTIONS_CHAIN" => "Y",
-		"AJAX_MODE" => "N",
-		"AJAX_OPTION_ADDITIONAL" => "",
-		"AJAX_OPTION_HISTORY" => "N",
-		"AJAX_OPTION_JUMP" => "N",
-		"AJAX_OPTION_STYLE" => "Y",
-		"CACHE_FILTER" => "N",
-		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
-		"CHECK_DATES" => "Y",
-		"DETAIL_URL" => "",
-		"DISPLAY_BOTTOM_PAGER" => "Y",
-		"DISPLAY_DATE" => "Y",
-		"DISPLAY_NAME" => "Y",
-		"DISPLAY_PICTURE" => "Y",
-		"DISPLAY_PREVIEW_TEXT" => "Y",
-		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
-		"FILTER_NAME" => "",
-		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "2",
-		"IBLOCK_TYPE" => "content",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
-		"INCLUDE_SUBSECTIONS" => "Y",
-		"MESSAGE_404" => "",
-		"NEWS_COUNT" => "20",
-		"PAGER_BASE_LINK_ENABLE" => "N",
-		"PAGER_DESC_NUMBERING" => "N",
-		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-		"PAGER_SHOW_ALL" => "N",
-		"PAGER_SHOW_ALWAYS" => "N",
-		"PAGER_TEMPLATE" => ".default",
-		"PAGER_TITLE" => "Новости",
-		"PARENT_SECTION" => "",
-		"PARENT_SECTION_CODE" => "",
-		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
-		),
-		"SET_BROWSER_TITLE" => "Y",
-		"SET_LAST_MODIFIED" => "N",
-		"SET_META_DESCRIPTION" => "Y",
-		"SET_META_KEYWORDS" => "Y",
-		"SET_STATUS_404" => "Y",
-		"SET_TITLE" => "Y",
-		"SHOW_404" => "N",
-		"SORT_BY1" => "ACTIVE_FROM",
-		"SORT_BY2" => "SORT",
-		"SORT_ORDER1" => "DESC",
-		"SORT_ORDER2" => "ASC",
-		"STRICT_SECTION_CHECK" => "N",
-		"COMPONENT_TEMPLATE" => "news"
-	),
-	false
-); ?>
+				"bitrix:breadcrumb",
+				"news_bcrumbs",
+				array(
+					"PATH" => "/",
+					"SITE_ID" => "s1",
+					"START_FROM" => "0",
+					"COMPONENT_TEMPLATE" => "news_bcrumbs"
+				),
+				false
+			); ?>
+			<!-- end of breadcrumbs -->
+
+			<!-- news list -->
+			<?php $APPLICATION->IncludeComponent(
+				"bitrix:news.list",
+				"news",
+				array(
+					"ACTIVE_DATE_FORMAT" => "d.m.Y",
+					"ADD_SECTIONS_CHAIN" => "Y",
+					"AJAX_MODE" => "N",
+					"AJAX_OPTION_ADDITIONAL" => "",
+					"AJAX_OPTION_HISTORY" => "N",
+					"AJAX_OPTION_JUMP" => "N",
+					"AJAX_OPTION_STYLE" => "Y",
+					"CACHE_FILTER" => "N",
+					"CACHE_GROUPS" => "Y",
+					"CACHE_TIME" => "36000000",
+					"CACHE_TYPE" => "A",
+					"CHECK_DATES" => "Y",
+					"DETAIL_URL" => "",
+					"DISPLAY_BOTTOM_PAGER" => "Y",
+					"DISPLAY_DATE" => "Y",
+					"DISPLAY_NAME" => "Y",
+					"DISPLAY_PICTURE" => "Y",
+					"DISPLAY_PREVIEW_TEXT" => "Y",
+					"DISPLAY_TOP_PAGER" => "N",
+					"FIELD_CODE" => array(
+						0 => "",
+						1 => "",
+					),
+					"FILTER_NAME" => "",
+					"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+					"IBLOCK_ID" => "2",
+					"IBLOCK_TYPE" => "content",
+					"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+					"INCLUDE_SUBSECTIONS" => "Y",
+					"MESSAGE_404" => "",
+					"NEWS_COUNT" => "20",
+					"PAGER_BASE_LINK_ENABLE" => "N",
+					"PAGER_DESC_NUMBERING" => "N",
+					"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+					"PAGER_SHOW_ALL" => "N",
+					"PAGER_SHOW_ALWAYS" => "N",
+					"PAGER_TEMPLATE" => ".default",
+					"PAGER_TITLE" => "Новости",
+					"PARENT_SECTION" => "",
+					"PARENT_SECTION_CODE" => $_GET['SECTION_CODE'],
+					"PREVIEW_TRUNCATE_LEN" => "",
+					"PROPERTY_CODE" => array(
+						0 => "",
+						1 => "",
+					),
+					"SET_BROWSER_TITLE" => "Y",
+					"SET_LAST_MODIFIED" => "N",
+					"SET_META_DESCRIPTION" => "Y",
+					"SET_META_KEYWORDS" => "Y",
+					"SET_STATUS_404" => "Y",
+					"SET_TITLE" => "Y",
+					"SHOW_404" => "N",
+					"SORT_BY1" => "ACTIVE_FROM",
+					"SORT_BY2" => "SORT",
+					"SORT_ORDER1" => "DESC",
+					"SORT_ORDER2" => "ASC",
+					"STRICT_SECTION_CHECK" => "N",
+					"COMPONENT_TEMPLATE" => "news"
+				),
+				false
+			); ?>
+			<!-- end of news list -->
 
 		</section>
 	</section>
 <?php else: ?>
 
-<section class="top-section container">
+	<section class="top-section container">
 
+		<!-- breadcrumbs -->
+		<?php $APPLICATION->IncludeComponent(
+			"bitrix:breadcrumb",
+			"news_bcrumbs",
+			array(
+				"PATH" => "/",
+				"SITE_ID" => "s1",
+				"START_FROM" => "0",
+				"COMPONENT_TEMPLATE" => "news_bcrumbs"
+			),
+			false
+		); ?>
+		<!-- end of breadcrumbs -->
 
-	<?$APPLICATION->IncludeComponent(
-	"bitrix:breadcrumb", 
-	"news_bcrumbs", 
-	array(
-		"PATH" => "/",
-		"SITE_ID" => "s1",
-		"START_FROM" => "0",
-		"COMPONENT_TEMPLATE" => "news_bcrumbs"
-	),
-	false
-);?>
-	<?$APPLICATION->IncludeComponent(
+		<!-- news detail -->
+		<?php $APPLICATION->IncludeComponent(
 	"bitrix:news.detail", 
 	"detail_new", 
 	array(
-		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"ACTIVE_DATE_FORMAT" => "j M Y",
 		"ADD_ELEMENT_CHAIN" => "N",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
@@ -127,37 +132,13 @@
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"ELEMENT_CODE" => "",
-		"ELEMENT_ID" => "14",
+		"ELEMENT_CODE" => $_GET["ELEMENT_CODE"],
+		"ELEMENT_ID" => "",
 		"FIELD_CODE" => array(
-			0 => "ID",
-			1 => "CODE",
-			2 => "XML_ID",
-			3 => "NAME",
-			4 => "TAGS",
-			5 => "SORT",
-			6 => "PREVIEW_TEXT",
-			7 => "PREVIEW_PICTURE",
-			8 => "DETAIL_TEXT",
-			9 => "DETAIL_PICTURE",
-			10 => "DATE_ACTIVE_FROM",
-			11 => "ACTIVE_FROM",
-			12 => "DATE_ACTIVE_TO",
-			13 => "ACTIVE_TO",
-			14 => "SHOW_COUNTER",
-			15 => "SHOW_COUNTER_START",
-			16 => "IBLOCK_TYPE_ID",
-			17 => "IBLOCK_ID",
-			18 => "IBLOCK_CODE",
-			19 => "IBLOCK_NAME",
-			20 => "IBLOCK_EXTERNAL_ID",
-			21 => "DATE_CREATE",
-			22 => "CREATED_BY",
-			23 => "CREATED_USER_NAME",
-			24 => "TIMESTAMP_X",
-			25 => "MODIFIED_BY",
-			26 => "USER_NAME",
-			27 => "",
+			0 => "DETAIL_TEXT",
+			1 => "DETAIL_PICTURE",
+			2 => "IBLOCK_TYPE_ID",
+			3 => "",
 		),
 		"IBLOCK_ID" => "2",
 		"IBLOCK_TYPE" => "content",
@@ -187,28 +168,30 @@
 		"USE_SHARE" => "N"
 	),
 	false
-);?>
-</section>
+); ?>
+		<!-- end of news detail -->
+	</section>
+
 <?php endif; ?>
 
 <div class="container">
 	<section class="section-mailing news-content__mailing" data-aos="fade-up">
 		<div class="section-mailing__bg desktop">
 			<picture class="picture">
-				<source type="image/webp" srcset="assets/images/section-mailing-bg.webp">
-				<img class="picture__img" src="assets/images/section-mailing-bg.png">
+				<source type="image/webp" srcset="<?= SITE_TEMPLATE_PATH ?>/assets/images/section-mailing-bg.webp">
+				<img class="picture__img" src="<?= SITE_TEMPLATE_PATH ?>/assets/images/section-mailing-bg.png">
 			</picture>
 		</div>
 		<div class="section-mailing__bg device-bg">
 			<picture class="picture">
-				<source type="image/webp" srcset="assets/images/section-mailing-bg-device.webp">
-				<img class="picture__img" src="assets/images/section-mailing-bg-device.png">
+				<source type="image/webp" srcset="<?= SITE_TEMPLATE_PATH ?>/assets/images/section-mailing-bg-device.webp">
+				<img class="picture__img" src="<?= SITE_TEMPLATE_PATH ?>/assets/images/section-mailing-bg-device.png">
 			</picture>
 		</div>
 		<div class="section-mailing__bg mobile-bg">
 			<picture class="picture">
-				<source type="image/webp" srcset="assets/images/section-mailing-bg-mobile.webp">
-				<img class="picture__img" src="assets/images/section-mailing-bg-mobile.png">
+				<source type="image/webp" srcset="<?= SITE_TEMPLATE_PATH ?>/assets/images/section-mailing-bg-mobile.webp">
+				<img class="picture__img" src="<?= SITE_TEMPLATE_PATH ?>/assets/images/section-mailing-bg-mobile.png">
 			</picture>
 		</div>
 		<div class="section-mailing__content">

@@ -2,7 +2,7 @@
 
 
 if (!function_exists('dd') and !function_exists('clean_keys')) {
-	function dd($var, bool $dump = false, $clean_tilde_keys = true)
+	function dd($var, bool $dump = false, bool $clean_tilde_keys = true)
 	{
 		global $APPLICATION;
 
@@ -31,7 +31,7 @@ if (!function_exists('dd') and !function_exists('clean_keys')) {
 			$depth -= 1;
 			foreach ($arr as $key => $item) {
 				if (is_array($item) and $depth > 1) {
-					$arr[$key] = clean_keys($item, depth: $depth);
+					$arr[$key] = clean_keys($item, "/~/", $depth);
 				}
 			}
 		}

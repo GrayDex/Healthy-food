@@ -19,7 +19,12 @@
 			<!-- end of breadcrumbs -->
 
 			<!-- news list -->
-			<?php $APPLICATION->IncludeComponent(
+			<?php
+global $arrFilter;
+$arrFilter = [];
+$arrFilter['!IBLOCK_SECTION_ID'] = false;
+
+ $APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
 	"news", 
 	array(
@@ -43,10 +48,10 @@
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
 		"FIELD_CODE" => array(
-			0 => "",
+			0 => "DETAIL_PICTURE",
 			1 => "",
 		),
-		"FILTER_NAME" => "",
+		"FILTER_NAME" => "arrFilter",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "3",
 		"IBLOCK_TYPE" => "content",
@@ -61,8 +66,8 @@
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Новости",
-		"PARENT_SECTION" => "",
-		"PARENT_SECTION_CODE" => $_GET["SECTION_CODE"],
+		"PARENT_SECTION" => $_GET["SECTION_CODE"],
+		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"PROPERTY_CODE" => array(
 			0 => "",
@@ -133,8 +138,8 @@
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"ELEMENT_CODE" => $_GET["ELEMENT_CODE"],
-		"ELEMENT_ID" => "",
+		"ELEMENT_CODE" => "",
+		"ELEMENT_ID" => $_GET["ELEMENT_CODE"],
 		"FIELD_CODE" => array(
 			0 => "DETAIL_TEXT",
 			1 => "DETAIL_PICTURE",

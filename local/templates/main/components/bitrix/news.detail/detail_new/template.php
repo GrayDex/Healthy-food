@@ -1,5 +1,6 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 $this->setFrameMode(true);
+//dd($arResult);
 ?>
 
 <section class="news-detail">
@@ -37,6 +38,14 @@ $this->setFrameMode(true);
 		<div class="news-detail__plug"><?= $arResult['SECTION']['PATH'][0]['NAME'] ?></div>
 	</div>
 	<div class="news-detail__content" data-aos="fade-up">
+
+        <?= $arResult['PREVIEW_TEXT'] ?>
+        <div class="news-detail__img">
+            <picture class="picture">
+<!--                <source type="image/webp" srcset="/local/templates/main/assets/images/main-news-card1.webp">-->
+                <img class="picture__img" src="<?= $arResult['DETAIL_PICTURE']['RES_PIC_SRC'] ?>">
+            </picture>
+        </div>
 		<?= $arResult['DETAIL_TEXT'] ?>
 	</div>
 </section>

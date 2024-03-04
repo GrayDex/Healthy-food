@@ -2,26 +2,18 @@
 $arUrlRewrite=array (
   1 => 
   array (
-    'CONDITION' => '#^/news/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/#',
+    'CONDITION' => '#^/new-news/([0-9]+)/([0-9]+)/#',
     'RULE' => 'SECTION_CODE=$1&ELEMENT_CODE=$2',
     'ID' => NULL,
-    'PATH' => '/news/index.php',
+    'PATH' => '/new-news/index.php',
     'SORT' => 100,
   ),
   2 => 
   array (
-    'CONDITION' => '#^/news/([a-zA-Z0-9_-]+)/#',
+    'CONDITION' => '#^/new-news/([0-9]+)/#',
     'RULE' => 'SECTION_CODE=$1',
-    'ID' => 'bitrix:news.list',
-    'PATH' => '/news/index.php',
-    'SORT' => 100,
-  ),
-  4 => 
-  array (
-    'CONDITION' => '#^/Главная/#',
-    'RULE' => '',
     'ID' => NULL,
-    'PATH' => '/index.php',
+    'PATH' => '/new-news/index.php',
     'SORT' => 100,
   ),
   5 => 

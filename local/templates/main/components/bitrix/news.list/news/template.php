@@ -67,7 +67,7 @@
                     <div class="news-card__bg">
                         <picture class="picture">
 <!--                            <source type="image/webp" srcset="">-->
-                            <img class="picture__img" src="<?= $arItem['PREVIEW_PICTURE']['RES_PIC_SRC'] ?>">
+                            <img class="picture__img" src="<?= $arItem['DETAIL_PICTURE']['RES_PIC_SRC'] ?>">
                         </picture>
                     </div>
                 </div>

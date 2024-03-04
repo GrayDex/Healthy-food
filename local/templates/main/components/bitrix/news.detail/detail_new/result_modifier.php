@@ -1,15 +1,9 @@
 <?php
-foreach ($arResult['ITEMS'] as $key => $arItem)
+
+if ($arResult['DETAIL_PICTURE'])
 {
-    $picKeys = ['PREVIEW_PICTURE', 'DETAIL_PICTURE'];
-    foreach($picKeys as $picKey)
-    {
-        if ($arItem[$picKey])
-        {
-            $picId = $arResult['ITEMS'][$key][$picKey]['ID'];
-            $size = ["width" => 1200, "height" => 800];
-            $resArr = CFile::ResizeImageGet($picId, $size, BX_RESIZE_IMAGE_EXACT);
-            $arResult['ITEMS'][$key][$picKey]['RES_PIC_SRC'] = $resArr['src'];
-        }
-    }
+    $picId = $arResult['DETAIL_PICTURE']['ID'];
+    $size = ["width" => 1200, "height" => 800];
+    $resArr = CFile::ResizeImageGet($picId, $size, BX_RESIZE_IMAGE_EXACT);
+    $arResult['DETAIL_PICTURE']['RES_PIC_SRC'] = $resArr['src'];
 }

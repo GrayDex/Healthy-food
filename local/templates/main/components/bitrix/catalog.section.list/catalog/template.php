@@ -25,10 +25,8 @@
 	                </div>
 	                <div class="main-catalog__item-bg mobile">
 	                    <picture class="picture">
-	                        <source type="image/webp"
-	                                srcset="<?= $arSection['SRC_IMG_MOBILE'] ?>">
-	                        <img class="picture__img"
-	                             src="<?= $arSection['SRC_IMG_MOBILE'] ?>">
+<!--	                        <source type="image/webp" srcset="--><?//= $arSection['SRC_IMG_MOBILE'] ?><!--">-->
+	                        <img class="picture__img" src="<?= $arSection['SRC_IMG_MOBILE'] ?>">
 	                    </picture>
 	                </div>
 	                <div class="main-catalog__item-row">

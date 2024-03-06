@@ -1,7 +1,7 @@
 <?php
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
-$strReturn .= '<div class="breadcrumbs">
+$strReturn .= '
 	<div class="breadcrumbs-wrapper">
 		<div class="breadcrumbs-wrapper__row"><a class="breadcrumbs__item" href="/index.php">главная</a>';
 $depth = count($arResult);
@@ -26,8 +26,8 @@ foreach ($arResult as $key => $item) {
 		$strReturn .= '<div class="breadcrumbs__current active">' . $item['TITLE'] . '</div>
 		</div>
 	</div>
-</div>';
+';
 	}
 }
 
-return $strReturn;
+return $strReturn;?>

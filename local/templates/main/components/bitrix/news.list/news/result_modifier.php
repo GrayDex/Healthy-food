@@ -1,5 +1,5 @@
 <?php if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die;
-
+//dd($arrFilter);
 foreach ($arResult['ITEMS'] as $key => $arItem)
 {
     if ($arItem['DETAIL_PICTURE']) {

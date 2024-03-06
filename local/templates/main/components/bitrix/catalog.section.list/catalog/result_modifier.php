@@ -8,8 +8,8 @@ foreach ($arResult['SECTIONS'] as $key => $arSection) {
     }
 
     if (!empty($arSection["DETAIL_PICTURE"])) {
-        $size = ['width' => 324, 'height' => 640];
-        if ($key > 1) {
+        $size = ['width' => 324, 'height' => 460];
+        if ($key == 2) {
             $size = ['width' => 670, 'height' => 240];
         }
         $resized_image = CFile::ResizeImageGet($arSection["DETAIL_PICTURE"], $size, BX_RESIZE_IMAGE_EXACT);

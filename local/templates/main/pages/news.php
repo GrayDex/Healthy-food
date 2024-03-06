@@ -3,7 +3,7 @@
 <?php if (empty($_GET['ELEMENT_CODE'])): ?>
 	<section class="top-section">
 		<section class="news-content container">
-
+            <div class="breadcrumbs">
 			<!-- breadcrumbs -->
 			<?php $APPLICATION->IncludeComponent(
 				"bitrix:breadcrumb",
@@ -16,6 +16,7 @@
 				),
 				false
 			); ?>
+            </div>
 			<!-- end of breadcrumbs -->
 
 			<!-- news list -->

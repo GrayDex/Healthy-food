@@ -36,7 +36,7 @@
 		),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "2",
+		"IBLOCK_ID" => "3",
 		"IBLOCK_TYPE" => "content",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"INCLUDE_SUBSECTIONS" => "Y",
@@ -242,7 +242,7 @@
 			1 => "",
 		),
 		"SHOW_PARENT_NAME" => "Y",
-		"TOP_DEPTH" => "2",
+		"TOP_DEPTH" => "1",
 		"VIEW_MODE" => "LINE"
 	),
 	false
@@ -530,7 +530,7 @@
 		),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "3",
+		"IBLOCK_ID" => "2",
 		"IBLOCK_TYPE" => "content",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"INCLUDE_SUBSECTIONS" => "Y",

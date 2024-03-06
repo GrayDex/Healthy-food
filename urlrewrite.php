@@ -1,43 +1,27 @@
 <?php
 $arUrlRewrite=array (
-  0 => 
-  array (
-    'CONDITION' => '#^/new-news/([0-9]+)/([0-9]+)/?clear_cache=Y#',
-    'RULE' => 'SECTION_CODE=$1&ELEMENT_CODE=$2',
-    'ID' => NULL,
-    'PATH' => '/new-news/index.php',
-    'SORT' => 100,
-  ),
   1 => 
   array (
-    'CONDITION' => '#^/new-news/([0-9]+)/([0-9]+)/#',
+    'CONDITION' => '#^/news/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/#',
     'RULE' => 'SECTION_CODE=$1&ELEMENT_CODE=$2',
     'ID' => NULL,
-    'PATH' => '/new-news/index.php',
-    'SORT' => 100,
-  ),
-  6 => 
-  array (
-    'CONDITION' => '#^/catalog/([0-9]+)/([0-9]+)/#',
-    'RULE' => 'SECTION_CODE=$1&ELEMENT_CODE=$2',
-    'ID' => '',
-    'PATH' => 'catalog/index.php',
+    'PATH' => '/news/index.php',
     'SORT' => 100,
   ),
   2 => 
   array (
-    'CONDITION' => '#^/new-news/([0-9]+)/#',
+    'CONDITION' => '#^/news/([a-zA-Z0-9_-]+)/#',
     'RULE' => 'SECTION_CODE=$1',
-    'ID' => NULL,
-    'PATH' => '/new-news/index.php',
+    'ID' => 'bitrix:news.list',
+    'PATH' => '/news/index.php',
     'SORT' => 100,
   ),
-  7 => 
+  4 => 
   array (
-    'CONDITION' => '#^/catalog/',
+    'CONDITION' => '#^/Главная/#',
     'RULE' => '',
-    'ID' => '',
-    'PATH' => 'catalog/index.php',
+    'ID' => NULL,
+    'PATH' => '/index.php',
     'SORT' => 100,
   ),
   5 => 

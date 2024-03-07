@@ -1,7 +1,7 @@
 <?php if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die;
-//dd($arrFilter);
-foreach ($arResult['ITEMS'] as $key => $arItem)
-{
+
+
+foreach ($arResult['ITEMS'] as $key => $arItem) {
     if ($arItem['DETAIL_PICTURE']) {
         $picId = $arResult['ITEMS'][$key]['DETAIL_PICTURE']['ID'];
         $size = ["width" => 1200, "height" => 800];
@@ -11,35 +11,50 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
 }
 
 if (CModule::IncludeModule('iblock')) {
-    $rsSections = CIBlockSection::GetList(array('SORT' => 'asc'), array('IBLOCK_CODE' => $arResult['CODE'], '!SECTION_ID' => false));
+    $rsSections = CIBlockSection::GetList(
+        array('SORT' => 'asc'),
+        array('IBLOCK_CODE' => $arResult['CODE'], 'GLOBAL_ACTIVE' => 'Y'));
 
     $sectionName = [];
+
+
     $arResult['SECTION_BY_ID'][] = [
         'ID' => 0,
         'NAME' => 'Все',
-        'SECTION_PAGE_URL' => '/new-news/',
+        'SECTION_PAGE_URL' => '/catalog/',
         'IS_ACTIVE' => !$_GET['SECTION_CODE'],
     ];
 
     while ($arSection = $rsSections->GetNext()) {
-        $arResult['SECTION_BY_ID'][] = [
-            'ID' => $arSection['ID'],
-            'NAME' => $arSection['NAME'],
-            'SECTION_PAGE_URL' => $arSection['SECTION_PAGE_URL'],
-            'IS_ACTIVE' => $arSection['ID'] == $_GET['SECTION_CODE'],
-        ];
+        if (!isset($arSection['IBLOCK_SECTION_ID'])) { // if parent
 
-        $sectionName[$arSection['ID']] = $arSection['NAME'];
+            if ($arSection['CODE'] == $_GET['SECTION_CODE']) {
+                $arResult['SECTION_BY_ID'][0]['SECTION_PAGE_URL'] = $arSection['SECTION_PAGE_URL'];
+                $arResult['SECTION_BY_ID'][0]['IS_ACTIVE'] = true;
+            }
+
+        } else { //if child
+
+            if ($arSection['CODE'] == $_GET['SECTION_CODE']) {
+                $rsParentSec = CIBlockSection::GetByID($arSection['IBLOCK_SECTION_ID']);
+                $arParentSec = $rsParentSec->GetNext();
+                $arResult['SECTION_BY_ID'][0]['SECTION_PAGE_URL'] = $arParentSec['SECTION_PAGE_URL'];
+
+            }
+            $arResult['SECTION_BY_ID'][] = [
+                'ID' => $arSection['ID'],
+                'NAME' => $arSection['NAME'],
+                'SECTION_PAGE_URL' => $arSection['SECTION_PAGE_URL'],
+                'IS_ACTIVE' => $arSection['CODE'] == $_GET['SECTION_CODE'],
+            ];
+            $sectionName[$arSection['ID']] = $arSection['NAME'];
+        }
     }
 
-    foreach ($arResult['ITEMS'] as $key => $arItem)
-    {
-        if (isset($arItem['IBLOCK_SECTION_ID']) && isset($sectionName[$arItem['IBLOCK_SECTION_ID']]))
-        {
+    foreach ($arResult['ITEMS'] as $key => $arItem) {
+        if (isset($arItem['IBLOCK_SECTION_ID']) && isset($sectionName[$arItem['IBLOCK_SECTION_ID']])) {
             $arResult['ITEMS'][$key]['SECTION_NAME'] = $sectionName[$arItem['IBLOCK_SECTION_ID']];
         }
     }
-	if (!isset($_GET['SECTION_CODE'])) {
-		$APPLICATION->SetTitle("Мороженое");
-	}
+
 }

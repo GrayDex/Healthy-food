@@ -1,3 +1,5 @@
+<?php if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die;?>
+
 <div class="popup-filters mobile" data-popup-wrapper="catalog-filters" data-overlay-on>
 	<div class="popup-filters__close popup-video__close" data-popup-close="catalog-filters">
 		<div class="btn-hover_parent">
